@@ -1,0 +1,16 @@
+<div id="selector-container">
+    <!-- <nz-select [nzMaxTagCount]="3" [nzMaxTagPlaceholder]="tagPlaceHolder" nzMode="multiple"
+        [nzOptions]="cities" [(ngModel)]="selectedCities" nzPlaceHolder="Please select"
+        (ngModelChange)="onCitiesSelected($event)">
+        <nz-option *ngFor="let city of cities" [nzValue]="city.name" [nzLabel]="city.name"></nz-option>
+    </nz-select>
+    <ng-template #tagPlaceHolder let-selectedList>and {{ selectedCities.length }} more selected</ng-template> -->
+
+    <nz-select style="width: 200px;" [nzMaxTagCount]="3" nzAllowClear nzPlaceHolder="Please select"
+        [(ngModel)]="selectedCities" [nzMaxTagCount]="3" [nzMaxTagPlaceholder]="tagPlaceHolder" nzMode="multiple"
+        (ngModelChange)="onCitiesSelected()" [nzShowSearch]="true">
+        <nz-option *ngFor="let city of cities" [nzLabel]="city.name" [nzValue]="city">
+        </nz-option>
+    </nz-select>
+    <ng-template #tagPlaceHolder let-selectedList>and {{ selectedCities.length -3 }} more selected</ng-template>
+</div>

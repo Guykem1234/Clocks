@@ -1,0 +1,5 @@
+<div id="clock-list">
+    <div *ngFor="let city of displayedCities$ | async">
+        <app-clock [city]="city"></app-clock>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div id="container">
+    <h2 id="city-name">{{city.name}}</h2>
+    <div id="clocks">
+        <div id="analog-clock">
+            <app-analog-clock [hours]="hours" [minutes]="minutes" [seconds]="seconds"></app-analog-clock>
+        </div>
+        <div id="digital-clock">
+            <app-digital-clock [hours]="hours" [minutes]="minutes" [seconds]="seconds"></app-digital-clock>
+        </div>
+    </div>
+</div>
